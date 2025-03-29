@@ -49,7 +49,7 @@ export default function ResponsiveSearch() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search"
-              className="bg-[#3C354A] rounded-full py-2 pl-10 pr-8 text-sm w-full focus:outline-none focus:ring-1 focus:ring-purple-500 border border-[#3C354A]"
+              className="bg-[#3C354A] rounded-xl py-2 pl-10 pr-8 text-sm w-full focus:outline-none focus:ring-1 focus:ring-gray-300 border border-[#3C354A]"
             />
             {query && (
               <button

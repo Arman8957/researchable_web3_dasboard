@@ -20,7 +20,7 @@ export default function CryptoCard({
   chartColor,
 }: CryptoCardProps) {
   return (
-    <div className="bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+    <div className="bg-[#3C354A] rounded-xl p-4 border border-gray-200">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="font-medium">{name}</span>

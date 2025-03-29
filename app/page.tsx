@@ -28,7 +28,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="p-4 grid grid-cols-2 lg:grid-cols-2 gap-4 border-l-2 border-gray-400">
+        <div className="p-4 grid grid-cols-2 lg:grid-cols-2 gap-4 ">
           {/* Hero Section */}
           <div className="col-span-1 lg:col-span-2 bg-gradient-to-r from-[#2A0FD3] to-[#FF7A7A8F] rounded-xl p-6 relative overflow-hidden">
             <div className="relative z-10">
@@ -104,6 +104,7 @@ export default function Home() {
               isPositive={true}
               chartData={[30, 40, 35, 50, 45, 55, 50, 60, 55, 65]}
               chartColor="#22C55E"
+              
             />
           </div>
 
@@ -142,7 +143,7 @@ export default function Home() {
             </div>
             <button
               onClick={() => setIsTransferModalOpen(true)}
-              className="w-full bg-purple-600 hover:bg-purple-700 transition-colors py-3 rounded-md flex items-center justify-center gap-2"
+              className="w-full bg-purple-600 hover:bg-purple-700 transition-colors py-3 rounded-xl flex items-center justify-center gap-2"
             >
               <div className="h-5 w-5 rounded-full bg-purple-400 flex items-center justify-center">
                 <span className="text-xs">↑</span>

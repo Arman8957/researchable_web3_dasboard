@@ -109,7 +109,7 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
         className={`fixed md:static h-screen z-50 transition-all duration-300 ease-in-out
           ${isMobileOpen ? "left-0" : "-left-80 md:left-0"}
           ${isOpen ? "md:w-64" : "md:w-20"}
-          bg-[#3C354A] flex flex-col py-6 border-l-1 border-gray-300`}
+          bg-[#3C354A] flex flex-col py-6 border-r-2 border-violet-300 border-opacity-5`}
       >
         {/* Close button for mobile */}
         <button
@@ -126,8 +126,8 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
             <Image
               src={Logo}
               alt="Crypto Logo"
-              width={20}
-              height={20}
+              width={25}
+              height={25}
               priority
             />
           </div>
@@ -141,7 +141,7 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
             Crypto
           </span>
 
-          {/* Toggle button for desktop */}
+         
           <button
             onClick={toggleSidebar}
             className="hidden md:flex ml-auto p-1 rounded-md text-gray-400 hover:text-white"
@@ -198,7 +198,7 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
         </div>
       </div>
 
-      {/* Logout confirmation modal */}
+     
       <LogoutConfirmation
         isOpen={showLogoutConfirmation}
         onClose={() => setShowLogoutConfirmation(false)}
