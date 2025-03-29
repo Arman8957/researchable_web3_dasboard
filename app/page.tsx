@@ -28,9 +28,9 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="p-4 grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div className="p-4 grid grid-cols-2 lg:grid-cols-2 gap-4 border-l-2 border-gray-400">
           {/* Hero Section */}
-          <div className="col-span-1 lg:col-span-2 bg-gradient-to-r from-purple-900 to-purple-700 rounded-xl p-6 relative overflow-hidden">
+          <div className="col-span-1 lg:col-span-2 bg-gradient-to-r from-[#2A0FD3] to-[#FF7A7A8F] rounded-xl p-6 relative overflow-hidden">
             <div className="relative z-10">
               <div className="text-xs font-medium text-purple-200 mb-1">ETHEREUM 2.0</div>
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
@@ -43,18 +43,18 @@ export default function Home() {
                 <br />
                 We make blockchain accessible.
               </p>
-              <button className="bg-white text-purple-900 px-4 py-2 rounded-md text-sm font-medium">Learn More</button>
+              <button className="bg-gray-700 text-white px-4 py-2  text-sm font-medium rounded-xl">Learn More</button>
             </div>
             <div className="absolute right-0 top-0 h-full w-1/2 pointer-events-none">
               {/* 3D Objects */}
-              <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-purple-400 rounded-full opacity-80 blur-sm"></div>
-              <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-blue-400 rounded-md transform rotate-45 opacity-80 blur-sm"></div>
-              <div className="absolute bottom-1/4 right-1/4 w-24 h-12 bg-cyan-400 rounded-full opacity-80 blur-sm transform -rotate-12"></div>
+              {/* <div className="absolute top-1/4 right-1/4 w-16 h-16 bg-purple-400 rounded-full opacity-80 "></div>
+              <div className="absolute top-1/2 right-1/3 w-20 h-20 bg-blue-400 rounded-md transform rotate-45 opacity-80 "></div>
+              <div className="absolute bottom-1/4 right-1/4 w-24 h-12 bg-cyan-400 rounded-full opacity-80  transform -rotate-12"></div> */}
             </div>
           </div>
 
           {/* ETH/USD Chart */}
-          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4  border border-gray-400">
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-2">
                 <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center">
@@ -77,7 +77,7 @@ export default function Home() {
           </div>
 
           {/* Crypto Price Cards */}
-          <div className="col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="col-span-1 lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-4 ">
             <CryptoCard
               name="BTC"
               fullName="Bitcoin"
@@ -108,7 +108,7 @@ export default function Home() {
           </div>
 
           {/* Market Overview */}
-          <div className="col-span-1 lg:col-span-2 bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+          <div className="col-span-1 lg:col-span-2 bg-[#3C354A] rounded-xl p-4 border border-gray-400">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-medium">Market Overview</h3>
               <MonthlyDropdown />
@@ -117,7 +117,7 @@ export default function Home() {
           </div>
 
           {/* Quick Transfer */}
-          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-gray-400">
             <h3 className="font-medium mb-4">Quick Transfer</h3>
             <div className="flex items-center gap-2 mb-6">
               <div className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
@@ -136,7 +136,7 @@ export default function Home() {
                 <span className="text-2xl font-bold">3.25</span>
                 <div className="flex items-center gap-1">
                   <div className="h-5 w-5 rounded-full bg-purple-500"></div>
-                  <span className="text-sm">ETH</span>
+                  <span className="text-sm">$</span>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function Home() {
           </div>
 
           {/* Profit Section */}
-          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-gray-400">
             <h3 className="font-medium mb-4">Profit</h3>
             <div className="bg-gray-700 rounded-md p-3 mb-3 flex items-center justify-between">
               <div>
@@ -181,7 +181,7 @@ export default function Home() {
           </div>
 
           {/* Market Trend */}
-          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-gray-400">
             <h3 className="font-medium mb-4">Market Trend</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
@@ -259,7 +259,7 @@ export default function Home() {
           </div>
 
           {/* Assets */}
-          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-[#3C354A]">
+          <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-gray-400">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-medium">Assets</h3>
               <button className="p-1 rounded bg-gray-700">

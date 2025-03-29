@@ -35,19 +35,19 @@ export default function Analytics() {
               <div className="flex gap-2 bg-gray-700 p-1 rounded-lg">
                 <button
                   onClick={() => setActiveChart("line")}
-                  className={`p-2 rounded-md ${activeChart === "line" ? "bg-purple-600 text-white" : "text-gray-400 hover:text-white"}`}
+                  className={`p-2 rounded-md ${activeChart === "line" ? "bg-purple-600 text-white" : "text-gray-400 hover:text-violet-200"}`}
                 >
                   <LineChartIcon className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setActiveChart("bar")}
-                  className={`p-2 rounded-md ${activeChart === "bar" ? "bg-purple-600 text-white" : "text-gray-400 hover:text-white"}`}
+                  className={`p-2 rounded-md ${activeChart === "bar" ? "bg-purple-600 text-white" : "text-gray-400 hover:text-violet-200"}`}
                 >
                   <BarChart className="h-5 w-5" />
                 </button>
                 <button
                   onClick={() => setActiveChart("pie")}
-                  className={`p-2 rounded-md ${activeChart === "pie" ? "bg-purple-600 text-white" : "text-gray-400 hover:text-white"}`}
+                  className={`p-2 rounded-md ${activeChart === "pie" ? "bg-purple-600 text-white" : "text-gray-400 hover:text-violet-200"}`}
                 >
                   <PieChart className="h-5 w-5" />
                 </button>

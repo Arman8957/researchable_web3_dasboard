@@ -33,7 +33,7 @@ export default function Settings() {
             <p className="text-gray-400">Manage your account settings and preferences</p>
           </div>
 
-          {/* Settings Content */}
+     
           <div className="bg-[#3C354A] rounded-xl overflow-hidden border border-[#3C354A]">
             <div className="flex flex-col md:flex-row">
               {/* Sidebar */}
@@ -130,14 +130,14 @@ export default function Settings() {
                         <label className="block text-sm text-gray-400 mb-2">Phone Number</label>
                         <input
                           type="tel"
-                          defaultValue="+1 (555) 123-4567"
+                          defaultValue="+8801790138957"
                           className="w-full bg-gray-700 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
                         />
                       </div>
                       <div className="md:col-span-2">
                         <label className="block text-sm text-gray-400 mb-2">Bio</label>
                         <textarea
-                          defaultValue="Crypto enthusiast and investor since 2017. Interested in DeFi and NFTs."
+                          defaultValue="Crypto enthusiast and developer."
                           rows={4}
                           className="w-full bg-gray-700 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
                         />

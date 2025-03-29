@@ -1,57 +1,90 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Home, BarChart2, Wallet, FileText, Settings, LogOut, Menu, X, ChevronLeft, ChevronRight } from "lucide-react"
-import Link from "next/link"
-import LogoutConfirmation from "./logout-confirmation"
+import { useState, useEffect } from "react";
+import {
+  Home,
+  BarChart2,
+  Wallet,
+  FileText,
+  Settings,
+  LogOut,
+  Menu,
+  X,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
+import LogoutConfirmation from "./logout-confirmation";
+import Logo  from "../public/Researchableads_logo.png";
 
 interface SidebarProps {
-  activePage?: string
+  activePage?: string;
 }
 
 export default function Sidebar({ activePage = "home" }: SidebarProps) {
-  const [isOpen, setIsOpen] = useState(true)
-  const [isMobileOpen, setIsMobileOpen] = useState(false)
-  const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isOpen, setIsOpen] = useState(true);
+  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [showLogoutConfirmation, setShowLogoutConfirmation] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Check if we're on mobile
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768)
+      setIsMobile(window.innerWidth < 768);
       if (window.innerWidth < 768) {
-        setIsOpen(false)
+        setIsOpen(false);
       } else {
         // Default to open on desktop/tablet
-        setIsOpen(true)
+        setIsOpen(true);
       }
-    }
+    };
 
     // Initial check
-    checkIfMobile()
+    checkIfMobile();
 
     // Add event listener
-    window.addEventListener("resize", checkIfMobile)
+    window.addEventListener("resize", checkIfMobile);
 
     // Cleanup
-    return () => window.removeEventListener("resize", checkIfMobile)
-  }, [])
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
 
   const toggleSidebar = () => {
     if (isMobile) {
-      setIsMobileOpen(!isMobileOpen)
+      setIsMobileOpen(!isMobileOpen);
     } else {
-      setIsOpen(!isOpen)
+      setIsOpen(!isOpen);
     }
-  }
+  };
 
   const menuItems = [
     { icon: Home, label: "Home", href: "/", active: activePage === "home" },
-    { icon: BarChart2, label: "Analytics", href: "/analytics", active: activePage === "analytics" },
-    { icon: Wallet, label: "Wallet", href: "#", active: activePage === "wallet" },
-    { icon: FileText, label: "Transactions", href: "/transactions", active: activePage === "transactions" },
-    { icon: Settings, label: "Settings", href: "/settings", active: activePage === "settings" },
-  ]
+    {
+      icon: BarChart2,
+      label: "Analytics",
+      href: "/analytics",
+      active: activePage === "analytics",
+    },
+    {
+      icon: Wallet,
+      label: "Wallet",
+      href: "#",
+      active: activePage === "wallet",
+    },
+    {
+      icon: FileText,
+      label: "Transactions",
+      href: "/transactions",
+      active: activePage === "transactions",
+    },
+    {
+      icon: Settings,
+      label: "Settings",
+      href: "/settings",
+      active: activePage === "settings",
+    },
+  ];
 
   return (
     <>
@@ -65,7 +98,10 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
 
       {/* Overlay for mobile */}
       {isMobileOpen && (
-        <div className="md:hidden fixed inset-0 bg-black/50 z-40" onClick={() => setIsMobileOpen(false)}></div>
+        <div
+          className="md:hidden fixed inset-0 bg-black/50 z-40"
+          onClick={() => setIsMobileOpen(false)}
+        ></div>
       )}
 
       {/* Sidebar */}
@@ -73,7 +109,7 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
         className={`fixed md:static h-screen z-50 transition-all duration-300 ease-in-out
           ${isMobileOpen ? "left-0" : "-left-80 md:left-0"}
           ${isOpen ? "md:w-64" : "md:w-20"}
-          bg-[#3C354A] flex flex-col py-6 border border-[#3C354A]`}
+          bg-[#3C354A] flex flex-col py-6 border-l-1 border-gray-300`}
       >
         {/* Close button for mobile */}
         <button
@@ -83,12 +119,24 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
           <X className="h-5 w-5" />
         </button>
 
-        <div className="flex items-center px-6 mb-8">
-          <div className="h-10 w-10 bg-gradient-to-br from-purple-600 to-blue-500 rounded flex items-center justify-center">
-            <div className="h-6 w-6 bg-white rounded-sm transform rotate-45"></div>
+        <div className="flex items-center px-2 mb-4">
+          {/* <div className="h-10 w-10  flex items-center justify-center"> */}
+          {/* <img src={Logo} alt="Researchable_ads" height={30} width={30} className="flex items-center justify-center"/> */}
+          <div className="h-10 w-10 flex items-center justify-center">
+            <Image
+              src={Logo}
+              alt="Crypto Logo"
+              width={20}
+              height={20}
+              priority
+            />
           </div>
+          {/* <div className="h-6 w-6 bg-white rounded-sm transform rotate-45"></div> */}
+          {/* </div> */}
           <span
-            className={`ml-3 font-bold text-lg text-white transition-opacity duration-200 ${isOpen ? "opacity-100" : "opacity-0 md:hidden"}`}
+            className={`ml-3 font-bold text-lg text-white transition-opacity duration-200 ${
+              isOpen ? "opacity-100" : "opacity-0 md:hidden"
+            }`}
           >
             Crypto
           </span>
@@ -98,7 +146,11 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
             onClick={toggleSidebar}
             className="hidden md:flex ml-auto p-1 rounded-md text-gray-400 hover:text-white"
           >
-            {isOpen ? <ChevronLeft className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
+            {isOpen ? (
+              <ChevronLeft className="h-5 w-5" />
+            ) : (
+              <ChevronRight className="h-5 w-5" />
+            )}
           </button>
         </div>
 
@@ -117,7 +169,9 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
                 >
                   <item.icon className="h-5 w-5 min-w-5" />
                   <span
-                    className={`ml-3 transition-all duration-200 ${isOpen ? "opacity-100" : "opacity-0 md:hidden"}`}
+                    className={`ml-3 transition-all duration-200 ${
+                      isOpen ? "opacity-100" : "opacity-0 md:hidden"
+                    }`}
                   >
                     {item.label}
                   </span>
@@ -133,7 +187,11 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
             className="flex items-center w-full p-3 rounded-xl text-gray-500 hover:text-gray-300 hover:bg-gray-800/50 transition-colors"
           >
             <LogOut className="h-5 w-5 min-w-5" />
-            <span className={`ml-3 transition-all duration-200 ${isOpen ? "opacity-100" : "opacity-0 md:hidden"}`}>
+            <span
+              className={`ml-3 transition-all duration-200 ${
+                isOpen ? "opacity-100" : "opacity-0 md:hidden"
+              }`}
+            >
               Logout
             </span>
           </button>
@@ -141,8 +199,10 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
       </div>
 
       {/* Logout confirmation modal */}
-      <LogoutConfirmation isOpen={showLogoutConfirmation} onClose={() => setShowLogoutConfirmation(false)} />
+      <LogoutConfirmation
+        isOpen={showLogoutConfirmation}
+        onClose={() => setShowLogoutConfirmation(false)}
+      />
     </>
-  )
+  );
 }
-

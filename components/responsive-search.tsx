@@ -62,7 +62,7 @@ export default function ResponsiveSearch() {
           </div>
           <button
             onClick={toggleSearch}
-            className="md:hidden ml-2 p-2 rounded-full bg-[#3C354A] text-gray-400 border border-[#3C354A]"
+            className="md:hidden ml-2 p-2 rounded-full bg-[#3C354A] text-gray-400 border border-gray-400"
           >
             <X className="h-5 w-5" />
           </button>
@@ -70,7 +70,7 @@ export default function ResponsiveSearch() {
       ) : (
         <button
           onClick={toggleSearch}
-          className="p-2 rounded-full bg-[#3C354A] text-gray-400 hover:text-white transition-colors border border-[#3C354A]"
+          className="p-2 rounded-full bg-[#3C354A] text-gray-400 hover:text-white transition-colors border border-gray-400"
         >
           <Search className="h-5 w-5" />
         </button>

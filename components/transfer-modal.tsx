@@ -47,7 +47,7 @@ export default function TransferModal({ isOpen, onClose }: TransferModalProps) {
               />
               <div className="flex items-center gap-1">
                 <div className="h-5 w-5 rounded-full bg-purple-500"></div>
-                <span className="text-sm">ETH</span>
+                <span className="text-sm">$</span>
               </div>
             </div>
           </div>
