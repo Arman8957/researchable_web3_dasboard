@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import { Copy, ExternalLink, LogOut, ChevronRight, Check } from "lucide-react"
+import Image from "next/image"
+import arman from "../public/arman.png"
 
 interface ProfilePopupProps {
   isOpen: boolean
@@ -20,12 +22,22 @@ export default function ProfilePopup({ isOpen, onClose }: ProfilePopupProps) {
   if (!isOpen) return null
 
   return (
-    <div className="absolute top-14 right-4 w-80 bg-[#3C354A] rounded-xl shadow-lg border border-[#3C354A] z-50 overflow-hidden">
+    <div className="absolute top-14 right-4 w-80 bg-purple-800 rounded-xl shadow-lg border border-[#3C354A] z-50 overflow-hidden">
       <div className="p-4 bg-gradient-to-r from-purple-900 to-purple-700">
         <div className="flex items-center gap-3">
-          <div className="h-12 w-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
-            <span className="text-lg font-bold">JD</span>
-          </div>
+          {/* <div className="h-12 w-12 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+            {/* <span className="text-lg font-bold">MA</span> 
+          </div> */}
+        <div className="">
+                    <Image
+                      src={arman}
+                      alt="Crypto Logo"
+                      width={30}
+                      height={30}
+                      className="rounded-full"
+                      priority
+                    />
+                  </div>
           <div>
             <h3 className="font-bold text-white">Md Arman</h3>
             <p className="text-sm text-purple-200">mdarmanya.h@gmail.com</p>

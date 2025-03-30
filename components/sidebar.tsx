@@ -109,7 +109,7 @@ export default function Sidebar({ activePage = "home" }: SidebarProps) {
         className={`fixed md:static h-screen z-50 transition-all duration-300 ease-in-out
           ${isMobileOpen ? "left-0" : "-left-80 md:left-0"}
           ${isOpen ? "md:w-64" : "md:w-20"}
-          bg-[#3C354A] flex flex-col py-6 border-r-2 border-violet-300 border-opacity-5`}
+          bg-[#3C354A] flex flex-col py-6 border-r-2 border-gray-300 border-opacity-20`}
       >
         {/* Close button for mobile */}
         <button

@@ -61,11 +61,11 @@ export default function NotificationBell({ initialCount = 3 }: NotificationBellP
       </button>
 
       {isOpen && (
-        <div className="absolute top-12 right-0 w-80 bg-[#3C354A] rounded-xl shadow-lg border border-[#3C354A] z-50">
+        <div className="absolute top-12 right-0 w-80 bg-white rounded-xl shadow-lg border border-[#3C354A] z-50">
           <div className="flex items-center justify-between p-3 border-b border-gray-700">
-            <h3 className="font-medium">Notifications</h3>
+            <h3 className="font-medium text-purple-950">Notifications</h3>
             {count > 0 && (
-              <button onClick={markAllAsRead} className="text-xs text-purple-400 hover:text-purple-300">
+              <button onClick={markAllAsRead} className="text-xs text-purple-600 hover:text-purple-400">
                 Mark all as read
               </button>
             )}
@@ -79,14 +79,14 @@ export default function NotificationBell({ initialCount = 3 }: NotificationBellP
                     className={`p-3 hover:bg-gray-700/50 transition-colors ${notification.read ? "opacity-70" : ""}`}
                   >
                     <div className="flex justify-between items-start mb-1">
-                      <h4 className="font-medium text-sm">{notification.title}</h4>
-                      <span className="text-xs text-gray-400">{notification.time}</span>
+                      <h4 className="font-medium text-sm text-purple-950">{notification.title}</h4>
+                      <span className="text-xs text-gray-500">{notification.time}</span>
                     </div>
-                    <p className="text-sm text-gray-300 mb-2">{notification.message}</p>
+                    <p className="text-sm text-purple-950 mb-2">{notification.message}</p>
                     {!notification.read && (
                       <button
                         onClick={() => markAsRead(notification.id)}
-                        className="text-xs text-purple-400 hover:text-purple-300"
+                        className="text-xs text-purple-500 hover:text-purple-400"
                       >
                         Mark as read
                       </button>
@@ -95,11 +95,11 @@ export default function NotificationBell({ initialCount = 3 }: NotificationBellP
                 ))}
               </div>
             ) : (
-              <div className="p-4 text-center text-gray-400 text-sm">No new notifications</div>
+              <div className="p-4 text-center text-gray-500 text-sm">No new notifications</div>
             )}
           </div>
           <div className="p-3 border-t border-gray-700">
-            <button className="w-full text-center text-sm text-purple-400 hover:text-purple-300">
+            <button className="w-full text-center text-sm text-purple-600 hover:text-purple-500">
               View all notifications
             </button>
           </div>

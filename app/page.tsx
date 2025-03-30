@@ -1,19 +1,21 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Plus, TrendingUp, TrendingDown } from "lucide-react"
-import Sidebar from "@/components/sidebar"
-import CryptoCard from "@/components/crypto-card"
-import LineChart from "@/components/line-chart"
-import MarketOverview from "@/components/market-overview"
-import ProfileButton from "@/components/profile-button"
-import MonthlyDropdown from "@/components/monthly-dropdown"
-import TransferModal from "@/components/transfer-modal"
-import NotificationBell from "@/components/notification-bell"
-import ResponsiveSearch from "@/components/responsive-search"
+import { useState } from "react";
+import { Plus, TrendingUp, TrendingDown } from "lucide-react";
+import Sidebar from "@/components/sidebar";
+import CryptoCard from "@/components/crypto-card";
+import LineChart from "@/components/line-chart";
+import MarketOverview from "@/components/market-overview";
+import ProfileButton from "@/components/profile-button";
+import MonthlyDropdown from "@/components/monthly-dropdown";
+import TransferModal from "@/components/transfer-modal";
+import NotificationBell from "@/components/notification-bell";
+import ResponsiveSearch from "@/components/responsive-search";
+import Image from "next/image";
+import arman from "../public/arman.png";
 
 export default function Home() {
-  const [isTransferModalOpen, setIsTransferModalOpen] = useState(false)
+  const [isTransferModalOpen, setIsTransferModalOpen] = useState(false);
 
   return (
     <div className="flex h-screen bg-[#261E35] text-white">
@@ -32,7 +34,9 @@ export default function Home() {
           {/* Hero Section */}
           <div className="col-span-1 lg:col-span-2 bg-gradient-to-r from-[#2A0FD3] to-[#FF7A7A8F] rounded-xl p-6 relative overflow-hidden">
             <div className="relative z-10">
-              <div className="text-xs font-medium text-purple-200 mb-1">ETHEREUM 2.0</div>
+              <div className="text-xs font-medium text-purple-200 mb-1">
+                ETHEREUM 2.0
+              </div>
               <h2 className="text-2xl md:text-3xl font-bold mb-2">
                 Your Gateway
                 <br />
@@ -43,7 +47,9 @@ export default function Home() {
                 <br />
                 We make blockchain accessible.
               </p>
-              <button className="bg-gray-700 text-white px-4 py-2  text-sm font-medium rounded-xl">Learn More</button>
+              <button className="bg-gray-700 text-white px-4 py-2  text-sm font-medium rounded-xl">
+                Learn More
+              </button>
             </div>
             <div className="absolute right-0 top-0 h-full w-1/2 pointer-events-none">
               {/* 3D Objects */}
@@ -63,15 +69,23 @@ export default function Home() {
                 <span className="font-medium">ETH/USD</span>
               </div>
               <div className="flex gap-1">
-                <button className="bg-gray-700 px-2 py-1 rounded text-xs font-medium">1D</button>
-                <button className="bg-gray-900 px-2 py-1 rounded text-xs font-medium">1W</button>
-                <button className="bg-gray-700 px-2 py-1 rounded text-xs font-medium">1M</button>
+                <button className="bg-gray-700 px-2 py-1 rounded text-xs font-medium">
+                  1D
+                </button>
+                <button className="bg-gray-900 px-2 py-1 rounded text-xs font-medium">
+                  1W
+                </button>
+                <button className="bg-gray-700 px-2 py-1 rounded text-xs font-medium">
+                  1M
+                </button>
               </div>
             </div>
             <LineChart
               data={[10, 25, 15, 30, 20, 35, 45, 40, 50, 60, 55, 70, 65, 80]}
               color="#8B5CF6"
-              secondaryData={[50, 45, 60, 55, 70, 65, 80, 75, 90, 85, 95, 100, 90, 85]}
+              secondaryData={[
+                50, 45, 60, 55, 70, 65, 80, 75, 90, 85, 95, 100, 90, 85,
+              ]}
               secondaryColor="#06B6D4"
             />
           </div>
@@ -104,7 +118,6 @@ export default function Home() {
               isPositive={true}
               chartData={[30, 40, 35, 50, 45, 55, 50, 60, 55, 65]}
               chartColor="#22C55E"
-              
             />
           </div>
 
@@ -121,11 +134,31 @@ export default function Home() {
           <div className="col-span-1 bg-[#3C354A] rounded-xl p-4 border border-gray-400">
             <h3 className="font-medium mb-4">Quick Transfer</h3>
             <div className="flex items-center gap-2 mb-6">
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
-                <span className="text-xs font-bold">JD</span>
+              {/* <div className="h-10 w-10 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center">
+                <span className="text-xs font-bold">AR</span>
+              </div> */}
+              <div className="">
+                <Image
+                  src={arman}
+                  alt="Crypto Logo"
+                  width={30}
+                  height={30}
+                  className="rounded-full"
+                  priority
+                />
               </div>
-              <div className="h-10 w-10 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center">
-                <span className="text-xs font-bold">TS</span>
+              {/* <div className="h-10 w-10 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 flex items-center justify-center">
+                <span className="text-xs font-bold">HR</span>
+              </div> */}
+              <div className="">
+                <Image
+                  src={arman}
+                  alt="Crypto Logo"
+                  width={30}
+                  height={30}
+                  className="rounded-full"
+                  priority
+                />
               </div>
               <button className="h-10 w-10 rounded-full border-2 border-dashed border-gray-600 flex items-center justify-center">
                 <Plus className="h-5 w-5 text-gray-400" />
@@ -151,7 +184,10 @@ export default function Home() {
               <span className="font-medium">Transfer Now</span>
             </button>
 
-            <TransferModal isOpen={isTransferModalOpen} onClose={() => setIsTransferModalOpen(false)} />
+            <TransferModal
+              isOpen={isTransferModalOpen}
+              onClose={() => setIsTransferModalOpen(false)}
+            />
           </div>
 
           {/* Profit Section */}
@@ -318,6 +354,5 @@ export default function Home() {
         </div>
       </main>
     </div>
-  )
+  );
 }
-
