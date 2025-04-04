@@ -199,7 +199,7 @@ export default function Home() {
                   <div className="h-6 w-6 rounded-full bg-green-500 flex items-center justify-center">
                     <TrendingUp className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-xl font-bold">1892.25</span>
+                  <span className="text-xl font-bold">192.25</span>
                 </div>
                 <div className="text-xs text-gray-400 mt-1">Income</div>
               </div>
@@ -210,7 +210,7 @@ export default function Home() {
                   <div className="h-6 w-6 rounded-full bg-red-500 flex items-center justify-center">
                     <TrendingDown className="h-4 w-4 text-white" />
                   </div>
-                  <span className="text-xl font-bold">387.47</span>
+                  <span className="text-xl font-bold">3.4</span>
                 </div>
                 <div className="text-xs text-gray-400 mt-1">Expenses</div>
               </div>
@@ -247,7 +247,7 @@ export default function Home() {
                         <span className="text-gray-400 text-xs">Binance</span>
                       </div>
                     </td>
-                    <td className="text-right py-2">$57707</td>
+                    <td className="text-right py-2">$5007</td>
                     <td className="text-right py-2 text-green-500">2.30%</td>
                   </tr>
                   <tr>
@@ -257,7 +257,7 @@ export default function Home() {
                         <span className="text-gray-400 text-xs">Ethereum</span>
                       </div>
                     </td>
-                    <td className="text-right py-2">$71123</td>
+                    <td className="text-right py-2">$8453</td>
                     <td className="text-right py-2 text-red-500">1.32%</td>
                   </tr>
                   <tr>
@@ -267,7 +267,7 @@ export default function Home() {
                         <span className="text-gray-400 text-xs">Litecoin</span>
                       </div>
                     </td>
-                    <td className="text-right py-2">$10601</td>
+                    <td className="text-right py-2">$25801</td>
                     <td className="text-right py-2 text-green-500">2.14%</td>
                   </tr>
                   <tr>
@@ -277,7 +277,7 @@ export default function Home() {
                         <span className="text-gray-400 text-xs">Cardano</span>
                       </div>
                     </td>
-                    <td className="text-right py-2">$27159</td>
+                    <td className="text-right py-2">$559</td>
                     <td className="text-right py-2 text-green-500">1.97%</td>
                   </tr>
                   <tr>
@@ -287,7 +287,7 @@ export default function Home() {
                         <span className="text-gray-400 text-xs">Pancake</span>
                       </div>
                     </td>
-                    <td className="text-right py-2">$72550</td>
+                    <td className="text-right py-2">$8950</td>
                     <td className="text-right py-2 text-red-500">1.03%</td>
                   </tr>
                 </tbody>
@@ -316,7 +316,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <div className="font-medium">0.14</div>
-                  <div className="text-xs text-gray-400">$4,325.95</div>
+                  <div className="text-xs text-gray-400">$2,424.9</div>
                 </div>
               </div>
               <div className="bg-gray-700 rounded-md p-3 flex items-center justify-between">
@@ -331,7 +331,7 @@ export default function Home() {
                 </div>
                 <div className="text-right">
                   <div className="font-medium">4.65</div>
-                  <div className="text-xs text-gray-400">$21,035.43</div>
+                  <div className="text-xs text-gray-400">$81,030.4</div>
                 </div>
               </div>
               <div className="bg-gray-700 rounded-md p-3 flex items-center justify-between">
@@ -345,8 +345,8 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="font-medium">0.14</div>
-                  <div className="text-xs text-gray-400">$4,325.95</div>
+                  <div className="font-medium">0.5</div>
+                  <div className="text-xs text-gray-400">$1,325.5</div>
                 </div>
               </div>
             </div>
