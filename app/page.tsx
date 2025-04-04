@@ -165,23 +165,23 @@ export default function Home() {
               </button>
             </div>
             <div className="mb-6">
-              <div className="text-sm text-gray-400 mb-2">Amount:</div>
-              <div className="flex items-center justify-between bg-gray-700 rounded-md p-3">
-                <span className="text-2xl font-bold">3.25</span>
+              <div className="text-sm  text-[#835dcf] mb-2">Amount:</div>
+              <div className="flex items-center justify-between  rounded-md p-3">
+                <span className="text-2xl text-[#f8f7fa] font-bold">3.25</span>
                 <div className="flex items-center gap-1">
-                  <div className="h-5 w-5 rounded-full bg-purple-500"></div>
-                  <span className="text-sm">$</span>
+                  {/* <div className="h-5 w-5 rounded-full "></div> */}
+                  <span className="text-sm text-[#8f5fee]">$</span>
                 </div>
               </div>
             </div>
             <button
               onClick={() => setIsTransferModalOpen(true)}
-              className="w-full bg-purple-600 hover:bg-purple-700 transition-colors py-3 rounded-xl flex items-center justify-center gap-2"
+              className="w-full bg-[#BB7FF5] hover:bg-purple-700 transition-colors py-3 rounded-xl flex items-center justify-center gap-2"
             >
               <div className="h-5 w-5 rounded-full bg-purple-400 flex items-center justify-center">
                 <span className="text-xs">↑</span>
               </div>
-              <span className="font-medium">Transfer Now</span>
+              <span className="font-medium ">Transfer Now</span>
             </button>
 
             <TransferModal
