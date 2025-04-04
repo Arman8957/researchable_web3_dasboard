@@ -62,11 +62,12 @@ export default function Home() {
           {/* ETH/USD Chart */}
           <div className="col-span-1 lg:row-span-2 bg-[#3C354A] rounded-xl p-4  border border-gray-400">
             <div className="flex items-center justify-between mb-4">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2 bg-slate-900 rounded-xl px-4 py-2">
                 <div className="h-6 w-6 rounded-full bg-white flex items-center justify-center">
-                  <span className="text-xs font-bold text-black">Ξ</span>
+                  {/* <span className="text-xs font-bold text-black">Ξ</span> */}
+                  <span className="text-xs font-bold text-blue-400">♦</span>
                 </div>
-                <span className="font-medium">ETH/USD</span>
+                <span className="font-medium">ETH/USD ▼</span>
               </div>
               <div className="flex gap-1">
                 <button className="bg-gray-700 px-2 py-1 rounded text-xs font-medium">
@@ -168,10 +169,8 @@ export default function Home() {
               <div className="flex items-center rounded-md p-3">
                 <div className="text-sm text-[#835dcf] mb-2">Amount: </div>
                
-                  <span className="text-sm text-[#835dcf]">$</span>
-                  <span className="text-2xl text-[#f8f7fa] font-bold">
-                    3.25
-                  </span>
+                  <span className="text-sm text-[#835dcf]"> $ </span>
+                  <span className="text-2xl text-[#f8f7fa] font-bold"> 3.25</span>
                   <div className="flex items-center gap-1">
                    
                   </div>
