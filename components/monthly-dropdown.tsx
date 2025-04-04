@@ -20,13 +20,13 @@ export default function MonthlyDropdown({ className }: MonthlyDropdownProps) {
 
   return (
     <div className={`relative ${className}`}>
-      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 bg-gray-700 rounded-md px-3 py-1">
-        <span className="text-sm">{selected}</span>
+      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 bg-gray-900   font-bold px-3 py-1">
+        <span className="text-sm rounded-lg p-2">{selected}</span>
         <ChevronDown className="h-4 w-4 text-gray-400" />
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-1 w-36 bg-gray-800 rounded-md shadow-lg border border-gray-700 z-10">
+        <div className="absolute top-full p-4  right-0 mt-1 w-36 bg-gray-800 rounded-lg shadow-lg border border-gray-700 z-10">
           <ul className="py-1">
             {options.map((option) => (
               <li key={option}>

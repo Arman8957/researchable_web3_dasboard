@@ -20,10 +20,11 @@ export default function CryptoCard({
   chartColor,
 }: CryptoCardProps) {
   return (
-    <div className="bg-[#3C354A] rounded-xl p-4 border border-gray-200">
+    <div className="bg-[#3C354A] rounded-xl p-4 border border-gray-400">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <span className="font-medium">{name}</span>
+          <span>⇄</span>
           <span className="text-gray-400 text-xs">USD</span>
         </div>
         <div className={`flex items-center gap-1 ${isPositive ? "text-green-500" : "text-red-500"}`}>

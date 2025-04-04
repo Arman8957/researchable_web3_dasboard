@@ -40,7 +40,7 @@ export default function MarketOverview() {
       ctx.font = "10px sans-serif"
       ctx.textAlign = "left"
       const percentage = Math.round(50 - i * (50 / gridCount))
-      ctx.fillText(`${percentage}%`, 5, y - 5)
+      ctx.fillText(`${percentage}K`, 5, y - 5)
     }
 
     // Generate random data for three lines

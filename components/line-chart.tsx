@@ -47,7 +47,7 @@ export default function LineChart({ data, color, secondaryData, secondaryColor }
       ctx.font = "10px sans-serif"
       ctx.textAlign = "left"
       const percentage = Math.round(100 - i * (100 / gridCount))
-      ctx.fillText(`${percentage}%`, 5, y - 5)
+      ctx.fillText(`${percentage}k`, 5, y - 5)
     }
 
     // Draw secondary data line if provided
