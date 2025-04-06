@@ -46,7 +46,7 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="p-4 grid grid-cols-2  lg:grid-cols-2 gap-4 ">
+        <div className="p-8 grid grid-cols-2  lg:grid-cols-2 gap-4 ">
           {/* Hero Section */}
           <div className="col-span-1 lg:row-span-2 lg:col-span-1 bg-gradient-to-r from-[#2A0FD3] to-[#FF7A7A8F] rounded-xl p-6 relative overflow-hidden">
             <div className="relative z-10">
