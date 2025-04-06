@@ -37,15 +37,16 @@ export default function Home() {
     <div className="flex h-screen bg-[#261E35] text-white">
       <Sidebar />
       <main className="flex-1 overflow-auto w-full">
-        <header className="flex items-center justify-between p-4 border-b border-gray-800">
-          <h1 className="text-xl font-medium ml-10 md:ml-0">Home</h1>
-          <div className="flex items-center gap-4">
+        <header className="relative flex items-center justify-between p-4 border-b border-gray-800">
+          <h1 className="text-xl font-medium absolute left-1/2 transform -translate-x-1/2">
+            Home
+          </h1>
+          <div className="flex items-center gap-4 ml-auto">
             <ResponsiveSearch />
             <NotificationBell />
             <ProfileButton />
           </div>
         </header>
-
         <div className="p-8 grid grid-cols-2  lg:grid-cols-2 gap-4 ">
           {/* Hero Section */}
           <div className="col-span-1 lg:row-span-2 lg:col-span-1 bg-gradient-to-r from-[#2A0FD3] to-[#FF7A7A8F] rounded-xl p-6 relative overflow-hidden">
